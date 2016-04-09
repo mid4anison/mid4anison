@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="mid4Anison">
+  <head>
+    <meta charset="utf-8">
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" /> 
+    <!-- Fonts and icons --> 
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> 
+    <!-- AngularJS Related -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <!-- Creative Tims Bootstrap Table JS -->
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script> 
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-table-toolbar.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+  </head>     
+      <h3>#ミドルテンポ4つ打ちアニソン</h3>
+  <body ng-controller="ListCtrl">
+    <div class="fresh-table">
+        <table id="fresh-table" class="table">
+        <thead>
+          <th data-field="id">ID</th>
+          <th data-field="artist">Artist</th>
+          <th data-field="seiyuu">Seiyuu</th>
+          <th data-field="title">Title</th>
+          <th data-field="link">Link</th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="track in tracks">
+          <td>{{track.id}}</td>
+          <td>{{track.artist}}</td>
+          <td>{{track.seiyuu}}</td>
+          <td>{{track.title}}</td>
+          <td>{{track.link}}</td>
+          </tr>
+        </tbody>
+        </table>
+    </div>
+  </body>
+</html>
