@@ -44,3 +44,15 @@ body {
 th {
     cursor:pointer;
 }
+
+.navbar-right {
+    float: right !important;
+    margin-right: 60px;
+}
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
