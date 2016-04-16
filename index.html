@@ -35,10 +35,10 @@
         <th ng-click="sort('id')" class="text-center">ID<span class="glyphicon sort-icon" ng-show="sortKey=='id'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('artist_name')" class="text-center">アーティスト名<span class="glyphicon sort-icon" ng-show="sortKey=='artist_name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('seiyuu_name')" class="text-center">声優名<span class="glyphicon sort-icon" ng-show="sortKey=='seiyuu_name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
-        <th ng-click="sort('composer')" class="text-center">作曲者<span class="glyphicon sort-icon" ng-show="sortKey=='composer'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
-        <th ng-click="sort('arranger')" class="text-center">編曲者<span class="glyphicon sort-icon" ng-show="sortKey=='arranger'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('song_title')" class="text-center">曲名<span class="glyphicon sort-icon" ng-show="sortKey=='song_title'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('anime_title')" class="text-center">アニメ作品<span class="glyphicon sort-icon" ng-show="sortKey=='anime_title'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+        <th ng-click="sort('composer')" class="text-center">作曲者<span class="glyphicon sort-icon" ng-show="sortKey=='composer'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+        <th ng-click="sort('arranger')" class="text-center">編曲者<span class="glyphicon sort-icon" ng-show="sortKey=='arranger'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('Year')" class="text-center">年<span class="glyphicon sort-icon" ng-show="sortKey=='Year'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('BPM')" class="text-center">BPM<span class="glyphicon sort-icon" ng-show="sortKey=='BPM'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th class="text-center">Link</th>
@@ -49,16 +49,16 @@
           <td class="text-center">{{track.id}}</td>
           <td class="text-center">{{track.artist_name}}</td>
           <td class="text-center">{{track.seiyuu_name}}</td>
-          <td class="text-center">{{track.composer}}</td>
-          <td class="text-center">{{track.arranger}}</td>
           <td class="text-center">{{track.song_title}}</td>
           <td class="text-center">{{track.anime_title}}</td>
+          <td class="text-center">{{track.composer}}</td>
+          <td class="text-center">{{track.arranger}}</td>
           <td class="text-center">{{track.Year}}</td>
           <td class="text-center">{{track.BPM}}</td>
           <td class="text-center"><a href="{{track.link}}">{{track.link}}</a></td>
           <td class="text-center">
             <div class="modal-header">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialogTestDialog{{$index}}" ng-click="Clear()">♪</button>
+              <button type="button" class="btn btn-primary" ng-if="track.link" data-toggle="modal" data-target="#dialogTestDialog{{$index}}" ng-click="Clear()">♪</button>
             </div>
             <div class="modal fade" id="dialogTestDialog{{$index}}" tabindex="-1" role="dialog" aria-labelledby="executionOptionLabel" aria-hidden="true">
               <div class="modal-dialog">
